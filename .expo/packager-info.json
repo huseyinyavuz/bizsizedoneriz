@@ -2,8 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 33110,
+  "packagerPid": 22550,
   "expoServerNgrokUrl": "https://db-k8w.anonymous.biz-size-doneriz.exp.direct",
   "packagerNgrokUrl": "https://packager.db-k8w.anonymous.biz-size-doneriz.exp.direct",
-  "ngrokPid": 33126
+  "ngrokPid": 22561,
+  "webpackServerPort": null
 }

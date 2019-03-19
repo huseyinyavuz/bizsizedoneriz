@@ -2,18 +2,20 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './reduxstore';
+import LoginScr from './screens/LoginScr';
 
 export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-          <Text>Open up App.js to start working on your app!</Text>
+          <LoginScr/>
         </View>
       </Provider>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
