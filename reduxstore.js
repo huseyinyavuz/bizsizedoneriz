@@ -5,6 +5,7 @@ import { reactReduxFirebase,firebaseReducer, getFirebase } from 'react-redux-fir
 import { reduxFirestore, getFirestore, firestoreReducer } from 'redux-firestore';
 import authReducer from './store/reducers/authReducer';
 import regEmployeeReducer from './store/reducers/regEmployeeReducer';
+import regEmployerReducer from './store/reducers/regEmployerReducer';
 import thunk from 'redux-thunk';
 import 'firebase/firestore';
 
@@ -16,7 +17,8 @@ const appReducer = combineReducers({
     firebase: firebaseReducer,
     firestore: firestoreReducer,
     auth: authReducer,
-    regEmployee: regEmployeeReducer
+    regEmployee: regEmployeeReducer,
+    regEmployer: regEmployerReducer
 });
 
 const store = createStore(appReducer,
