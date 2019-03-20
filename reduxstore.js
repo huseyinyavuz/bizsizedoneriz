@@ -4,7 +4,9 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import { reactReduxFirebase,firebaseReducer, getFirebase } from 'react-redux-firebase';
 import { reduxFirestore, getFirestore, firestoreReducer } from 'redux-firestore';
 import authReducer from './store/reducers/authReducer';
+import regEmployeeReducer from './store/reducers/regEmployeeReducer';
 import thunk from 'redux-thunk';
+import 'firebase/firestore';
 
 const fbConfig = config;
 
@@ -13,7 +15,8 @@ firebase.initializeApp(fbConfig);
 const appReducer = combineReducers({
     firebase: firebaseReducer,
     firestore: firestoreReducer,
-    auth: authReducer
+    auth: authReducer,
+    regEmployee: regEmployeeReducer
 });
 
 const store = createStore(appReducer,

@@ -1,9 +1,8 @@
 export const registerWithFacebook = () => {
     return  async (dispatch, getState, {getFirebase}) => {
         const firebase = getFirebase();
-        console.log('firebase', firebase);
         var app_id = '317167969003654';
-        const { type, token } =  await Expo.Facebook.logInWithReadPermissionsAsync(app_id, { permissions: ['public_profile'] });
+        const { type, token } =  await Expo.Facebook.logInWithReadPermissionsAsync(app_id);
         console.log('type',type);
         if (type == 'success') {
             const credential = firebase.auth.FacebookAuthProvider.credential(token);
