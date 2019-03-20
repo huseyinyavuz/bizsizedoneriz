@@ -1,7 +1,7 @@
 function Employer(employer){
     this.firstname = employer.firstname;
     this.lastname = employer.lastname;
-    this.occupation = employer.business;
+    this.business = employer.business;
 }
 
 export default Employer;
