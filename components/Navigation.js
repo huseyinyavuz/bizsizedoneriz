@@ -3,16 +3,18 @@ import LoginScr from '../screens/LoginScr';
 import EmployeeRegScr from '../screens/EmployeeRegScr';
 import EmployerRegScr from '../screens/EmployerRegScr';
 import CreateJobOfferScr from '../screens/CreateJobOfferScr';
+import ListJobsOffersScr from '../screens/ListJobOffersScr';
 
 const AppNavigator = createStackNavigator(
     {
         Login: LoginScr,
         EmployeeReg: EmployeeRegScr,
         EmployerReg: EmployerRegScr,
-        CreateJobOffer: CreateJobOfferScr
+        CreateJobOffer: CreateJobOfferScr,
+        ListJobOffers: ListJobsOffersScr
     },
     {
-        initialRouteName: 'CreateJobOffer'
+        initialRouteName: 'ListJobOffers'
     }
 );
 
