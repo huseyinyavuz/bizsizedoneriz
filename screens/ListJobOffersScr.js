@@ -19,7 +19,6 @@ class ListJobOffersScr extends React.Component{
         return(
             <View>
                 <Text>List Job Offers Screen</Text>
-                
             </View>
         );
     }

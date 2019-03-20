@@ -1,11 +1,11 @@
-import {createStackNavigator, createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
 import LoginScr from '../screens/LoginScr';
 import EmployeeRegScr from '../screens/EmployeeRegScr';
 import EmployerRegScr from '../screens/EmployerRegScr';
 import CreateJobOfferScr from '../screens/CreateJobOfferScr';
 import ListJobsOffersScr from '../screens/ListJobOffersScr';
 
-const AppNavigator = createStackNavigator(
+const AppNavigator = createBottomTabNavigator(
     {
         Login: LoginScr,
         EmployeeReg: EmployeeRegScr,
