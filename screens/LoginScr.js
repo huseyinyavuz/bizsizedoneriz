@@ -33,6 +33,10 @@ class LoginScr extends React.Component{
                     title='Facebook Login'
                     onPress={this.handleFacebookLogin}
                 />
+                <Button
+                    title='App Login'
+
+                />
             </View>
         );
     }
