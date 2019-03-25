@@ -20,7 +20,6 @@ class LoginScr extends React.Component{
             console.log(e);
         }
     }
-    
 
     componentDidUpdate(){
         console.log('props', this.props);

@@ -14,7 +14,7 @@ const AppNavigator = createBottomTabNavigator(
         ListJobOffers: ListJobsOffersScr
     },
     {
-        initialRouteName: 'ListJobOffers'
+        initialRouteName: 'Login'
     }
 );
 
