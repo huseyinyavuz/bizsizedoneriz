@@ -1,8 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import {connect} from 'react-redux';
-import { string } from 'prop-types';
-
+import {registerWithEmail} from '../store/actions/authActions';
 
 //TODO: Add strings
 
@@ -21,7 +20,7 @@ class AppLoginScr extends React.Component{
     async handleAppLogin(){
 
         try{
-
+            await this.props.registerWithEmail(this.state);
         }
         catch(e){
             console.log(e);
@@ -54,4 +53,18 @@ class AppLoginScr extends React.Component{
 
 }
 
-export default AppLoginScr;
+const mapStateToProps = (state) => {
+    console.log('state',state)
+    return{
+        authError: state.auth.authError,
+        auth: state.firebase.auth,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        registerWithEmail: (creds) => dispatch(registerWithEmail(creds)),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppLoginScr);

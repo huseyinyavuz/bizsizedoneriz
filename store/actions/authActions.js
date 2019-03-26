@@ -42,3 +42,18 @@ export const registerWithFacebook = () => {
           // ...
         });*/
 }
+
+export const registerWithEmail = (credentials) => {
+    return (dispatch, getState, {getFirebase}) => {
+      const firebase = getFirebase();
+      firebase.auth().createUserWithEmailAndPassword(
+        credentials.email,
+        credentials.password
+      ).then((user) => {
+        dispatch({ type: 'APP_REG_SUCCESS'});
+      }).catch((err) => {
+        dispatch({ type: 'APP_REG_ERROR', err})
+      });
+    }
+  }
+  

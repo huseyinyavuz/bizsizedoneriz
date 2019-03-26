@@ -16,6 +16,18 @@ const authReducer = (state = initState, action) => {
                 ...state,
                 authError: action.errorCode
             }
+        case 'APP_REG_SUCCESS':
+            console.log('app_reg_success');
+            return {
+                ...state,
+                authError: null
+            }
+        case 'APP_REG_ERROR':
+            console.log('app_reg_error');
+            return {
+                ...state,
+                authError: action.err
+            }
         default:
             return state;
     }

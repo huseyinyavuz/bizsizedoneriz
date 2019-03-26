@@ -4,6 +4,7 @@ import EmployeeRegScr from '../screens/EmployeeRegScr';
 import EmployerRegScr from '../screens/EmployerRegScr';
 import CreateJobOfferScr from '../screens/CreateJobOfferScr';
 import ListJobsOffersScr from '../screens/ListJobOffersScr';
+import AppLoginScr from '../screens/AppLoginScr';
 
 const AppNavigator = createBottomTabNavigator(
     {
@@ -11,7 +12,8 @@ const AppNavigator = createBottomTabNavigator(
         EmployeeReg: EmployeeRegScr,
         EmployerReg: EmployerRegScr,
         CreateJobOffer: CreateJobOfferScr,
-        ListJobOffers: ListJobsOffersScr
+        ListJobOffers: ListJobsOffersScr,
+        AppLogin: AppLoginScr
     },
     {
         initialRouteName: 'Login'
